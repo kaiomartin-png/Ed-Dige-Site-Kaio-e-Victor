@@ -2,5 +2,5 @@
 *{/*seletor universal*/
 margin: 0;/* define o espaçamento externo de um elemento como zero em todos os quatro lados (cima, direita, baixo e esquerda) */
 padding: 0;/*define o espaçamento interno de um elemento como zero, removendo qualquer preenchimento entre o conteúdo e a borda*/
-box-sizing: border-box;/*
+box-sizing: border-box;/* faz com que a largura (width) e a altura (height) de um elemento incluam o conteúdo, o preenchimento interno (padding) e a borda (border) no cálculo do tamanho total*/
 }
