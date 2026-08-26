@@ -1,0 +1,6 @@
+/* resetar as configurações do css*/
+*{/*seletor universal*/
+margin: 0;/* define o espaçamento externo de um elemento como zero em todos os quatro lados (cima, direita, baixo e esquerda) */
+padding: 0;/*define o espaçamento interno de um elemento como zero, removendo qualquer preenchimento entre o conteúdo e a borda*/
+box-sizing: border-box;/*
+}
