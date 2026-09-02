@@ -4,3 +4,57 @@ margin: 0;/* define o espaçamento externo de um elemento como zero em todos os 
 padding: 0;/*define o espaçamento interno de um elemento como zero, removendo qualquer preenchimento entre o conteúdo e a borda*/
 box-sizing: border-box;/* faz com que a largura (width) e a altura (height) de um elemento incluam o conteúdo, o preenchimento interno (padding) e a borda (border) no cálculo do tamanho total*/
 }
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: blue;
+    color: black;
+    line-height: 1.6;
+    padding: 20px;
+}
+/*ESTILIZANDO AS TAGS PRINCIPAIS DA EMPRESA*/
+h1 {
+    color: #1a365d;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+h2 {
+    color: #2b6cb0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #cbd5e0;
+    padding-bottom: 5px;
+}
+p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+img {
+    max-width: 220px;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto 20px auto;
+    box-shadow: 0 4px 6px rgba(0,0,0,01);
+}
+ul {
+    list-style-type: square;
+    padding-left: 25px;
+    margin-bottom: 15px;
+}
+li {
+    padding: 5px 0;
+    font-weight: bold;
+}
+a {
+    display: inline-block;
+    background-color: #3182ce;
+    color: #ffffff;
+    padding: 10px 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+address {
+    
+}
