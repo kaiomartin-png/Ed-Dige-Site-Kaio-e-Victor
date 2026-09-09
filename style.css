@@ -6,7 +6,7 @@ box-sizing: border-box;/* faz com que a largura (width) e a altura (height) de u
 }
 body {
     font-family: 'Arial', sans-serif;
-    background-color: blue;
+    background-color: #3182ce;
     color: black;
     line-height: 1.6;
     padding: 20px;
