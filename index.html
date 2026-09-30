@@ -2,29 +2,46 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <!-- Responsividade para dispositivos móveis -->
+    <!-- Responsividade: Garante que a página ajuste o zoom e a escala corretamente em dispositivos móveis -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VKTI - Peças e Componentes de Alta Performance</title>
-    <!-- Vinculação do arquivo de estilos externo -->
+    <!-- Vinculação da folha de estilos externa -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Atalho "Skip to main content": Essencial para navegadores por teclado pularem o menu de navegação -->
+    <!-- 
+      ATALHO "SKIP LINK":
+      Permite que usuários navegando via teclado (tecla Tab) pulem direto para o conteúdo principal, 
+      evitando ter que percorrer todos os links do menu toda vez que trocarem de seção.
+    -->
     <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
 
-    <!-- ARIA Live Region: Notifica leitores de tela sobre mensagens dinâmicas (ex: envio do formulário) -->
+    <!-- 
+      ARIA LIVE REGION:
+      Uma área invisível que anuncia dinamicamente mensagens para leitores de tela quando o formulário é enviado,
+      sem interromper abruptamente a navegação do usuário.
+    -->
     <div id="status-formulario" class="sr-only" aria-live="polite"></div>
 
-    <!-- CABEÇALHO DA PÁGINA (<header>): Contém a identidade da empresa e o menu de navegação principal -->
+    <!-- 
+      CABEÇALHO SEMÂNTICO (<header>):
+      Representa o topo da aplicação/site contendo a identificação da marca e a barra de navegação global.
+    -->
     <header class="header">
         <div class="container header-container">
             <div class="logo">
-                <!-- Usamos a tag <img> com 'alt' descritivo. Para logos institucionais, indicamos o nome da marca. -->
+                <!-- 
+                  LOGOTIPO E ALT:
+                  O atributo 'alt' descreve o conteúdo da imagem para leitores de tela e em falhas de carregamento.
+                -->
                 <img src="logotipo.jpg" alt="VKTI Peças e Componentes - Logotipo Oficial">
             </div>
 
-            <!-- NAVEGAÇÃO PRINCIPAL (<nav>): Identifica um bloco de links de navegação para o leitor de tela -->
+            <!-- 
+              NAVEGAÇÃO PRINCIPAL (<nav>):
+              Indica um bloco principal de links de navegação. O aria-label especifica qual é essa navegação.
+            -->
             <nav aria-label="Navegação principal">
                 <ul class="nav-list">
                     <li><a href="#sobre">Quem Somos</a></li>
@@ -36,41 +53,45 @@
         </div>
     </header>
 
-    <!-- CONTEÚDO PRINCIPAL (<main>): Deve existir apenas um por página. Concentra o conteúdo central. -->
+    <!-- 
+      CONTEÚDO PRINCIPAL (<main>):
+      Representa o conteúdo central e exclusivo da página. Deve existir apenas um <main> ativo por página.
+    -->
     <main id="conteudo-principal">
 
-        <!-- SEÇÃO SOBRE A EMPRESA (<section>): Agrupa um conteúdo temático relevante -->
-        <section id="sobre" class="section section-about">
+        <!-- SEÇÃO HERO / APRESENTAÇÃO INSTITUCIONAL -->
+        <section id="sobre" class="section section-hero" aria-labelledby="titulo-hero">
             <div class="container">
-                <!-- O h1 é reservado para o título principal da página/seção primária -->
-                <h1>VKTI Peças e Componentes</h1>
+                <!-- Título Nível 1: Define o propósito principal da página -->
+                <h1 id="titulo-hero">VKTI Peças e Componentes</h1>
                 <p class="lead-text">
                     A VKTI é uma empresa especializada no fornecimento de hardwares e peças de alta performance para computadores. Garantimos a solução ideal para a sua necessidade de infraestrutura de TI e setups de alta exigência.
                 </p>
                 <div class="hero-actions">
-                    <!-- Botões estilo CTA (Call to Action) utilizando link semântico com função de ação -->
+                    <!-- Chamadas para Ação (CTA) usando links com estilos visuais de botões -->
                     <a href="#contato" class="btn btn-primary">Solicitar Orçamento</a>
                     <a href="https://pt.wikipedia.org/wiki/Hardware" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                         Saiba mais sobre o setor
-                        <!-- Texto exclusivo para leitores de tela avisando que o link abre em nova aba (Diretriz WCAG) -->
+                        <!-- O texto sr-only avisa o usuário de leitor de tela que o link abrirá em outra janela/aba -->
                         <span class="sr-only">(abre em uma nova aba)</span>
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- SEÇÃO DE PRODUTOS -->
-        <section id="produtos" class="section">
+        <!-- SEÇÃO DE PRODUTOS DA EMPRESA -->
+        <section id="produtos" class="section" aria-labelledby="titulo-produtos">
             <div class="container">
-                <!-- Estrutura hierárquica de títulos: h2 para seções dentro da página -->
-                <h2>Nossos Produtos</h2>
-                <p>Trabalhamos com os melhores fabricantes do mercado global para oferecer peças com garantia e nota fiscal.</p>
+                <!-- Título Nível 2: Subdivide as seções principais do site -->
+                <h2 id="titulo-produtos">Nossos Produtos</h2>
+                <p class="section-description">Trabalhamos com os melhores fabricantes do mercado global para oferecer peças com garantia e nota fiscal.</p>
 
-                <!-- Grid de produtos organizado com uma lista não ordenada (<ul>) -->
+                <!-- Grid de Produtos estruturado em uma Lista Não Ordenada (<ul>) -->
                 <ul class="card-grid">
                     <li class="card">
                         <h3>Placas de Vídeo</h3>
                         <p>Placas para processamento gráfico avançado, renderização 3D e sistemas gamer de alto desempenho.</p>
+                        <!-- Atributo aria-label fornece contexto único para cada link de consulta -->
                         <a href="#contato" class="card-link" aria-label="Consultar modelos de Placas de Vídeo">Consultar modelos</a>
                     </li>
                     <li class="card">
@@ -87,11 +108,12 @@
             </div>
         </section>
 
-        <!-- SEÇÃO DE DIFERENCIAIS COMERCIAIS -->
-        <section id="diferenciais" class="section section-alt">
+        <!-- SEÇÃO DE DIFERENCIAIS COMPETITIVOS -->
+        <section id="diferenciais" class="section section-alt" aria-labelledby="titulo-diferenciais">
             <div class="container">
-                <h2>Por que escolher a VKTI?</h2>
+                <h2 id="titulo-diferenciais">Por que escolher a VKTI?</h2>
                 <div class="features-grid">
+                    <!-- <article>: Utilizado para blocos de conteúdo independentes e autocontidos -->
                     <article class="feature-item">
                         <h3>Garantia Estendida</h3>
                         <p>Suporte completo contra defeitos de fabricação e peças sob reposição ágil.</p>
@@ -109,21 +131,25 @@
         </section>
 
         <!-- SEÇÃO DE CONTATO E FORMULÁRIO ACESSÍVEL -->
-        <section id="contato" class="section">
+        <section id="contato" class="section" aria-labelledby="titulo-contato">
             <div class="container">
-                <h2>Fale Conosco</h2>
-                <p>Preencha o formulário abaixo para receber uma cotação personalizada de componentes.</p>
+                <h2 id="titulo-contato">Fale Conosco</h2>
+                <p class="section-description">Preencha o formulário abaixo para receber uma cotação personalizada de componentes.</p>
 
                 <div class="contact-wrapper">
-                    <!-- FORMULÁRIO (<form>): Totalmente associado com rótulos (<label>) -->
-                    <form class="contact-form" action="#" method="post" aria-describedby="form-instrucao">
+                    <!-- 
+                      FORMULÁRIO ACESSÍVEL (<form>):
+                      Associado ao 'p' descritivo através de aria-describedby para explicar campos obrigatórios.
+                    -->
+                    <form class="contact-form" id="form-contato" action="#" method="post" aria-describedby="form-instrucao" novalidate>
+                        
                         <p id="form-instrucao" class="form-instruction">
                             Campos marcados com asterisco (<span aria-hidden="true">*</span>) são de preenchimento obrigatório.
                         </p>
 
                         <!-- Campo Nome -->
                         <div class="form-group">
-                            <!-- O atributo 'for' do label DEVE corresponder exatamente ao 'id' do input -->
+                            <!-- O atributo 'for' do <label> é estritamente ligado ao 'id' do <input> -->
                             <label for="nome">Nome completo <span class="required" aria-hidden="true">*</span></label>
                             <input type="text" id="nome" name="nome" required aria-required="true" autocomplete="name">
                         </div>
@@ -146,11 +172,11 @@
                             <textarea id="mensagem" name="mensagem" rows="5" required aria-required="true"></textarea>
                         </div>
 
-                        <!-- Botão de Envio do Formulário -->
-                        <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                        <!-- Botão de submissão do formulário -->
+                        <button type="submit" class="btn btn-primary btn-submit">Enviar Mensagem</button>
                     </form>
 
-                    <!-- INFORMAÇÕES DE CONTATO (<address>): Representa dados de contato direto do responsável -->
+                    <!-- DADOS DE CONTATO DIRETO (<address>): Contato formal da organização -->
                     <div class="contact-info">
                         <h3>Dados de Contato</h3>
                         <address>
@@ -165,7 +191,7 @@
 
     </main>
 
-    <!-- RODAPÉ DA PÁGINA (<footer>): Informações de direitos autorais e links complementares -->
+    <!-- RODAPÉ DA PÁGINA (<footer>): Informações institucionais e direitos autorais -->
     <footer class="footer">
         <div class="container footer-container">
             <p>&copy; 2026 VKTI Peças e Componentes. Todos os direitos reservados.</p>
@@ -173,5 +199,16 @@
         </div>
     </footer>
 
+    <!-- Script leve para simulação de envio e preenchimento da ARIA Live Region -->
+    <script>
+        document.getElementById('form-contato').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const statusDiv = document.getElementById('status-formulario');
+            
+            // Simulação de resposta acessível
+            statusDiv.textContent = "Obrigado! Sua mensagem foi enviada com sucesso. Entraremos em contato em breve.";
+            this.reset();
+        });
+    </script>
 </body>
 </html>
